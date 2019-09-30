@@ -1,0 +1,4 @@
+.state("%module_name%", {
+            url: "/%module_name%%state_name%",
+            templateUrl: "components/%module_name%/%module_name%%module_type%/%module_name%%view_type_by_module%IncludeView.html"
+       

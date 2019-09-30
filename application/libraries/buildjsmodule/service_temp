@@ -1,0 +1,22 @@
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+
+(function ()
+{
+    "use strict";
+    var %module_lcc_name%ServiceApp = angular.module("%module_app_name%service", []);
+
+    %module_lcc_name%ServiceApp.factory("%module_ucc_name%Service", ['KaHOWSService', function (KaHOWSService) {
+            var %module_lcc_name%Service = function () {
+                this.kaHOWSService = KaHOWSService;
+            };
+            %service_method_details%
+            
+
+            return new %module_lcc_name%Service;
+        }]);
+})();

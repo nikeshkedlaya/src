@@ -1,0 +1,1 @@
+var %module_lcc_name%App = angular.module("%module_app_name%", ['']);

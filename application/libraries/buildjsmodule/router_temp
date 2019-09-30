@@ -1,0 +1,17 @@
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+(function () {
+    'use strict';
+
+    var %module_lcc_name%RoutesApp = angular.module("%module_app_name%.ui-routes", []);
+    %module_lcc_name%RoutesApp.config(['$stateProvider', %module_lcc_name%Router]);
+
+    function %module_lcc_name%Router($stateProvider)
+    {
+        $stateProvider%state_conf_details%
+    }
+})();

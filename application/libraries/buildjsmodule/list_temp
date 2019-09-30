@@ -1,0 +1,53 @@
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+
+(function ()
+{
+    "use strict";
+    var %module_lcc_name%ControllerApp = angular.module("%module_app_name%", ['']);
+    %module_lcc_name%ControllerApp.controller("%module_ucc_name%Controller", %module_ucc_name%Controller);
+    %module_ucc_name%Controller.prototype = Object.create(KaHOFormController.prototype);
+    %module_ucc_name%Controller.prototype.constructor = %module_ucc_name%Controller;
+    
+    function %module_ucc_name%Controller(%module_ucc_name%Service, KaHOListService,$scope)
+    {
+        KaHOListController.call(this, %module_ucc_name%Service, KaHOListService,$scope);
+        %list_conf%
+    }
+    %module_ucc_name%Controller.prototype.getList = function () {
+        this.%get_list_method_name%();
+    };
+
+    %module_ucc_name%Controller.prototype.getListDetail = function (clickedObj) {
+        this.%get_list_method_name%();
+    };
+
+ %module_ucc_name%Controller.prototype.%get_list_method_name% = function () {
+        this.%get_list_method_name%(this %method_params%);
+    };
+
+    %module_ucc_name%Controller.prototype.TrueGetListener = function (jsonRespKey, jsonObject)
+    {
+        KaHOFormController.prototype.TrueGetListener.call(this, jsonRespKey, jsonObject);
+        switch (jsonRespKey)
+        {
+            %true_get_listeners_cases%
+        }
+    };
+    
+    %module_ucc_name%ComposeController.prototype.FalseGetListener = function (jsonRespKey, jsonObject)
+    {
+        KaHOFormController.prototype.FalseGetListener.call(this, jsonRespKey, jsonObject);
+        switch (jsonRespKey)
+        {
+            %false_get_listeners_cases%
+        }
+    };
+
+    %module_ucc_name%ComposeController.$inject = ['%module_ucc_name%Service', 'KaHOListService','$scope'];
+
+})();

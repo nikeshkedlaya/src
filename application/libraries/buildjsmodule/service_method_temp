@@ -1,0 +1,4 @@
+%module_lcc_name%Service.prototype.%method_name% = function (ctrlContext %method_params%)
+            {
+                this.kaHOWSService.%ws_action_type%(ctrlContext,%ws_method_url%,%ws_method_responsekey% %method_params%);
+            };
